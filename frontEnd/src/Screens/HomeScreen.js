@@ -1,83 +1,16 @@
-//Women Category
-import ethnicWearData from '../ethnicWear.js';
-import westernWearData from '../westernWear.js';
-import footWearData from '../footWear.js';
-import innerWearData from '../innerWear.js';
-import bagsData from '../bags.js';
-import jewelleryData from '../jewellery.js';
-import accessoriesData from '../accessoriesWomen.js';
-import wellnessData from '../wellness.js';
-import toolsData from '../tools.js';
-//Men category
-import footwearMenData from '../footwearMen.js';
-import accessoriesMenData from '../accessoriesMen.js';
-import ethnicWearMenData from '../ethnicWearMen.js';
-import innerWearMenData from '../innerWearMen.js';
-import bottomWearData from '../bottomWear.js';
-import clothingData from '../clothing.js'; 
-//Skin Care category
-import skinCareData from '../skinCare.js';
-//Bath and Shower category
-import bathAndShowerData from '../bathAndShower.js';
-//Fragnances Category
-import perfumeData from '../perfume.js';
-// Packed Foods Category
-import packedFoodsData from '../packedFoods.js';
-//Hair Category
-import hairCareData from '../hairCare.js';
-import toolsHairData from '../toolsHair.js';
-import herbalData from '../herbal.js';
-import hairRemovalData from '../hairRemoval.js';
-import straightnersData from '../straightners.js';
-import stylersData from '../stylers.js';
-import trimmersData from '../trimmers.js';
-import dryersData from '../dryers.js';
-import hairAccessoriesData from '../hairAccessories.js';
-//Makeup Category
-import faceData from '../face.js';
-import eyesData from '../eyes.js';
-import lipsData from '../lips.js';
-import nailsData from '../nails.js';
-import makeupKitsData from '../makeupKits.js';
-import makeupAccessoriesData from '../makeupAccessories.js';
-import makeupComboData from '../makeupCombo.js';
-import creamMenData from '../creamMen.js';
-import groomingData from '../grooming.js';
-// Home Category
-import storageData from '../storage.js';
-import applianceData from '../appliance.js';
-import curtainData from '../curtain.js';
-import livingRoomData from '../livingRoom.js';
-import kitchenToolsData from '../kitchenTools.js';
-import kitchenStorageData from '../kitchenStorage.js';
-import kitchenLinensData from '../kitchenLinens.js';
-import kitchenAppliancesData from '../kitchenAppliances.js';
-import cookwareData from '../cookware.js';
-import gardenData from '../garden.js';
-import carpetsData from '../carpets.js';
-import beddingData from '../bedding.js';
-import bathroomLinenData from '../bathroomLinen.js';
-import bathroomAccessoriesData from '../bathroomAccessories.js';
-//Electronics Category
-import earphoneData from '../earphone.js';
-import headphoneData from '../headphone.js';
-import cableData from '../cable.js';
-import bluetoothData from '../bluetooth.js';
-import casesData from '../cases.js';
-import powerBankData from '../powerBank.js';
-import chargersData from '../chargers.js';
-import holdersData from '../holders.js';
-import mouseData from '../mouse.js';
-import laptopSkinData from '../laptopSkin.js';
-import laptopScreenData from '../laptopScreen.js';
-import cameraData from '../camera.js';
-import tripodData from '../tripod.js';
-import cctvData from '../cctv.js'; 
 const HomeScreen = {
-    render: () => {
+    render: async() => {
         //Women category
         if(window.location.href.indexOf("ethnicWear") > -1){
-            const {products} = ethnicWearData;
+            const response = await fetch("http://localhost:7000/api/products/ethnicWear", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -100,7 +33,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("westernWear") > -1){
-            const {products} = westernWearData;
+            const response = await fetch("http://localhost:7000/api/products/westernWear", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -123,7 +64,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("footwear") > -1){
-            const {products} = footWearData;
+            const response = await fetch("http://localhost:7000/api/products/footwear", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -146,7 +95,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("innerWear") > -1){
-            const {products} = innerWearData;
+            const response = await fetch("http://localhost:7000/api/products/innerWear", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -169,7 +126,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("bags") > -1){
-            const {products} = bagsData;
+            const response = await fetch("http://localhost:7000/api/products/bags", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -192,7 +157,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("jewellery") > -1){
-            const {products} = jewelleryData;
+            const response = await fetch("http://localhost:7000/api/products/jewellery", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -215,7 +188,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("accessoriesWomen") > -1){
-            const {products} = accessoriesData;
+            const response = await fetch("http://localhost:7000/api/products/accessoriesWomen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -238,7 +219,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("wellness") > -1){
-            const {products} = wellnessData;
+            const response = await fetch("http://localhost:7000/api/products/wellness", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -261,7 +250,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("tools") > -1){
-            const {products} = toolsData;
+            const response = await fetch("http://localhost:7000/api/products/tools", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -285,7 +282,15 @@ const HomeScreen = {
         }
         //Men category
         if(window.location.href.indexOf("footwearMen") > -1){
-            const {products} = footwearMenData;
+            const response = await fetch("http://localhost:7000/api/products/footwearMen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -308,7 +313,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("accessoriesMen") > -1){
-            const {products} = accessoriesMenData;
+            const response = await fetch("http://localhost:7000/api/products/accessoriesMen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -331,7 +344,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("ethnicWearMen") > -1){
-            const {products} = ethnicWearMenData;
+            const response = await fetch("http://localhost:7000/api/products/ethnicWearMen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -354,7 +375,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("innerWearMen") > -1){
-            const {products} = innerWearMenData;
+            const response = await fetch("http://localhost:7000/api/products/innerWearMen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -377,7 +406,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("bottomWear") > -1){
-            const {products} = bottomWearData;
+            const response = await fetch("http://localhost:7000/api/products/bottomWear", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -400,7 +437,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("clothing") > -1){
-            const {products} = clothingData;
+            const response = await fetch("http://localhost:7000/api/products/clothing", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -424,7 +469,15 @@ const HomeScreen = {
         } 
         //Skin Care category
         if(window.location.href.indexOf("skinCare") > -1){
-            const {products} = skinCareData;
+            const response = await fetch("http://localhost:7000/api/products/skinCare", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -448,7 +501,15 @@ const HomeScreen = {
         }
         //Bath and Shower category
         if(window.location.href.indexOf("bathAndShower") > -1){
-            const {products} = bathAndShowerData;
+            const response = await fetch("http://localhost:7000/api/products/bathAndShower", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -472,7 +533,15 @@ const HomeScreen = {
         }
         //Fragnances Category
         if(window.location.href.indexOf("perfume") > -1){
-            const {products} = perfumeData;
+            const response = await fetch("http://localhost:7000/api/products/perfume", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -496,7 +565,15 @@ const HomeScreen = {
         }
         //Packed Foods Category
         if(window.location.href.indexOf("packedFoods") > -1){
-            const {products} = packedFoodsData;
+            const response = await fetch("http://localhost:7000/api/products/packedFoods", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -520,7 +597,15 @@ const HomeScreen = {
         }
         //Hair Category
         if(window.location.href.indexOf("hairCare") > -1){
-            const {products} = hairCareData;
+            const response = await fetch("http://localhost:7000/api/products/hairCare", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -543,7 +628,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("toolsHair") > -1){
-            const {products} = toolsHairData;
+            const response = await fetch("http://localhost:7000/api/products/toolsHair", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -566,7 +659,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("herbal") > -1){
-            const {products} = herbalData;
+            const response = await fetch("http://localhost:7000/api/products/herbal", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -589,7 +690,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("hairRemoval") > -1){
-            const {products} = hairRemovalData;
+            const response = await fetch("http://localhost:7000/api/products/hairRemoval", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -612,7 +721,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("straightners") > -1){
-            const {products} = straightnersData;
+            const response = await fetch("http://localhost:7000/api/products/straightners", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -635,7 +752,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("stylers") > -1){
-            const {products} = stylersData;
+            const response = await fetch("http://localhost:7000/api/products/stylers", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -658,7 +783,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("trimmers") > -1){
-            const {products} = trimmersData;
+            const response = await fetch("http://localhost:7000/api/products/trimmers", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -681,7 +814,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("dryers") > -1){
-            const {products} = dryersData;
+            const response = await fetch("http://localhost:7000/api/products/dryers", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -704,7 +845,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("hairAccessories") > -1){
-            const {products} = hairAccessoriesData;
+            const response = await fetch("http://localhost:7000/api/products/hairAccessories", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -728,7 +877,15 @@ const HomeScreen = {
         }
         //Makeup Category
         if(window.location.href.indexOf("face") > -1){
-            const {products} = faceData;
+            const response = await fetch("http://localhost:7000/api/products/face", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -751,7 +908,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("eyes") > -1){
-            const {products} = eyesData;
+            const response = await fetch("http://localhost:7000/api/products/eyes", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -774,7 +939,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("lips") > -1){
-            const {products} = lipsData;
+            const response = await fetch("http://localhost:7000/api/products/lips", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -797,7 +970,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("nails") > -1){
-            const {products} = nailsData;
+            const response = await fetch("http://localhost:7000/api/products/nails", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -820,7 +1001,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("makeupKits") > -1){
-            const {products} = makeupKitsData;
+            const response = await fetch("http://localhost:7000/api/products/makeupKits", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -843,7 +1032,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("makeupAccessories") > -1){
-            const {products} = makeupAccessoriesData;
+            const response = await fetch("http://localhost:7000/api/products/makeupAccessories", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -866,7 +1063,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("makeupCombo") > -1){
-            const {products} = makeupComboData;
+            const response = await fetch("http://localhost:7000/api/products/makeupCombo", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -889,7 +1094,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("creamMen") > -1){
-            const {products} = creamMenData;
+            const response = await fetch("http://localhost:7000/api/products/creamMen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -912,7 +1125,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("grooming") > -1){
-            const {products} = groomingData;
+            const response = await fetch("http://localhost:7000/api/products/grooming", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -936,7 +1157,15 @@ const HomeScreen = {
         }
         // Home Category
         if(window.location.href.indexOf("storage.html") > -1){
-            const {products} = storageData;
+            const response = await fetch("http://localhost:7000/api/products/storage", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -959,7 +1188,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("appliance") > -1){
-            const {products} = applianceData;
+            const response = await fetch("http://localhost:7000/api/products/appliance", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -982,7 +1219,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("curtain") > -1){
-            const {products} = curtainData;
+            const response = await fetch("http://localhost:7000/api/products/curtain", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1005,7 +1250,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("livingRoom") > -1){
-            const {products} = livingRoomData;
+            const response = await fetch("http://localhost:7000/api/products/livingRoom", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1028,7 +1281,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("kitchenTools") > -1){
-            const {products} = kitchenToolsData;
+            const response = await fetch("http://localhost:7000/api/products/kitchenTools", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1051,7 +1312,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("kitchenStorage") > -1){
-            const {products} = kitchenStorageData;
+            const response = await fetch("http://localhost:7000/api/products/kitchenStorage", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1074,7 +1343,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("kitchenLinens") > -1){
-            const {products} =kitchenLinensData;
+            const response = await fetch("http://localhost:7000/api/products/kitchenLinens", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1097,7 +1374,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("kitchenAppliances") > -1){
-            const {products} = kitchenAppliancesData;
+            const response = await fetch("http://localhost:7000/api/products/kitchenAppliances", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1120,7 +1405,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("cookware") > -1){
-            const {products} = cookwareData;
+            const response = await fetch("http://localhost:7000/api/products/cookware", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1143,7 +1436,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("garden") > -1){
-            const {products} = gardenData;
+            const response = await fetch("http://localhost:7000/api/products/garden", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1166,7 +1467,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("carpets") > -1){
-            const {products} = carpetsData;
+            const response = await fetch("http://localhost:7000/api/products/carpets", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1189,7 +1498,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("bedding") > -1){
-            const {products} = beddingData;
+            const response = await fetch("http://localhost:7000/api/products/bedding", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1212,7 +1529,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("bathroomLinen") > -1){
-            const {products} = bathroomLinenData;
+            const response = await fetch("http://localhost:7000/api/products/bathroomLinen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1235,7 +1560,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("bathroomAccessories") > -1){
-            const {products} = bathroomAccessoriesData;
+            const response = await fetch("http://localhost:7000/api/products/bathroomAccessories", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1259,7 +1592,15 @@ const HomeScreen = {
         } 
         //Electronics Category
         if(window.location.href.indexOf("earphone") > -1){
-            const {products} = earphoneData;
+            const response = await fetch("http://localhost:7000/api/products/earphone", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1282,7 +1623,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("headphone") > -1){
-            const {products} = headphoneData;
+            const response = await fetch("http://localhost:7000/api/products/headphone", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1305,7 +1654,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("cable") > -1){
-            const {products} = cableData;
+            const response = await fetch("http://localhost:7000/api/products/cable", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1328,7 +1685,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("bluetooth") > -1){
-            const {products} = bluetoothData;
+            const response = await fetch("http://localhost:7000/api/products/bluetooth", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1351,7 +1716,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("cases") > -1){
-            const {products} = casesData;
+            const response = await fetch("http://localhost:7000/api/products/cases", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1374,7 +1747,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("powerBank") > -1){
-            const {products} = powerBankData;
+            const response = await fetch("http://localhost:7000/api/products/powerBank", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1397,7 +1778,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("chargers") > -1){
-            const {products} = chargersData;
+            const response = await fetch("http://localhost:7000/api/products/chargers", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1420,7 +1809,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("holders") > -1){
-            const {products} = holdersData;
+            const response = await fetch("http://localhost:7000/api/products/holders", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1443,7 +1840,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("mouse") > -1){
-            const {products} = mouseData;
+            const response = await fetch("http://localhost:7000/api/products/mouse", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1466,7 +1871,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("laptopSkin") > -1){
-            const {products} = laptopSkinData;
+            const response = await fetch("http://localhost:7000/api/products/laptopSkin", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1489,7 +1902,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("laptopScreen") > -1){
-            const {products} = laptopScreenData;
+            const response = await fetch("http://localhost:7000/api/products/laptopScreen", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1512,7 +1933,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("camera") > -1){
-            const {products} = cameraData;
+            const response = await fetch("http://localhost:7000/api/products/camera", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1535,7 +1964,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("tripod") > -1){
-            const {products} = tripodData;
+            const response = await fetch("http://localhost:7000/api/products/tripod", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
@@ -1558,7 +1995,15 @@ const HomeScreen = {
             `;
         }
         if(window.location.href.indexOf("cctv") > -1){
-            const {products} = cctvData;
+            const response = await fetch("http://localhost:7000/api/products/cctv", {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if(!response || !response.ok){
+                return `<div> Error in getting data</div>`;
+            }
+            const products = await response.json();
             return `               
             <ul class="products">
             ${products.map( product => `
