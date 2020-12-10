@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+*{
+    box-sizing: border-box;
+    list-style: none;
+}
+html{
+    font-size: 62.5%; 
+}
+body{
+    height: 100vh;
+    font-size: 1.6rem;
+    margin: 0;
+    background: rgb(236, 223, 226);
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 4rem;
+    height: 100%;
+}
+/*main code for firstpage.css */
+main{
+    padding-top: 4rem;
+    padding-left: 8rem;
+}
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
+    font-family: 'Ranchers', cursive;
+}
+.category {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: 30rem;
+   /* background-color: rgba(0,0,0,0.3); */
+}
+.category-item {
+    background: transparent;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    text-transform: capitalize;
+}
+.category-item-header{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    color: rgb(31, 30, 30);
+}
+.category-item-header:hover{
+    color: rgb(80, 29, 29);
+    border-radius: 1.8rem;
+    box-shadow: 0 0 5px rgb(80, 29, 29),
+                0 0 5px rgb(80, 29, 29);
+}
+.category-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+.category-item-header.active::after {
+    content: "\2212";
+}
+.category-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.category-item-body-content {
+    padding: 1rem;
+    line-height: 3rem;
+    font-size: 1.7rem;
+    font-family: 'Roboto', sans-serif;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #662c05, transparent) 1;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+ul{
+    padding-left: 1rem;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(58, 56, 56);
+    font-weight: 700;
+} 
+ul li a:hover{
+    color: rgb(80, 29, 29);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 5px rgb(236, 144, 144),
+                0 0 5px rgb(136, 78, 78);
+}
+/* used for the pages in which there are no sub categories for a cateegory */
+.c-i-h{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.c-i-h a{
+    text-decoration: none;
+    color: rgb(31, 30, 30);
+}
+.c-i-h:hover{
+    color: rgb(80, 29, 29);
+    border-radius: 1.8rem;
+    box-shadow: 0 0 5px rgb(80, 29, 29),
+                0 0 5px rgb(80, 29, 29);
+}
+/* code to make the page responsive */
+@media(max-width:767px) {
+    html {
+      font-size: 10px;
+    }
+    main{
+        padding-top: 4rem;
+        padding-left: 3rem;
+    }
+    .category {
+        width: 90%;
+        max-width: 1000px;
+        margin-left: 0.1rem;
+    }
+}
