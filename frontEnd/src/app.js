@@ -4,7 +4,7 @@ import Error404Screen from './Screens/Error404Screen.js'
 import { parseRequestUrl } from './utils.js';
 const routes = {
     '/' : HomeScreen,
-    '/#/product/:id': ProductScreen,
+    '/product/:id': ProductScreen,
 }
 const router = () => {               //used to define the url path when a product is opened
     const request = parseRequestUrl();
