@@ -343,8 +343,8 @@ const HomeScreen = {
             `).join('\n')} 
             `;
         }
-        if(window.location.href.indexOf("ethnicWearMen") > -1){
-            const response = await fetch("http://localhost:7000/api/products/ethnicWearMen", {
+        if(window.location.href.indexOf("traditionalWearMen") > -1){
+            const response = await fetch("http://localhost:7000/api/products/traditionalWearMen", {
                 headers: {
                     'Content-Type': 'application/json',
                 }

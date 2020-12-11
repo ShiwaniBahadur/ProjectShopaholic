@@ -13,7 +13,7 @@ const tools = require('./tools.js');
 //Men Category
 const footwearMen = require('./footwearMen.js');
 const accessoriesMen = require('./accessoriesMen.js');
-const ethnicWearMen = require('./ethnicWearMen.js');
+const traditionalWearMen = require('./traditionalWearMen.js');
 const innerWearMen = require('./innerWearMen.js');
 const bottomWear = require('./bottomWear.js');
 const clothing = require('./clothing.js');
@@ -74,7 +74,7 @@ const laptopSkin = require('./laptopSkin.js');
 const laptopScreen = require('./laptopScreen.js');
 const camera = require('./camera.js');
 const tripod = require('./tripod.js');
-const cctv = require('./cctv.js');
+const cctv = require('./cctv.js'); 
 
 const app = express();
 app.use(cors());
@@ -113,8 +113,8 @@ app.get('/api/products/footwearMen', (req, res) => {
 app.get('/api/products/accessoriesMen', (req, res) => {
     res.send(accessoriesMen.products);
 });
-app.get('/api/products/ethnicWearMen', (req, res) => {
-    res.send(ethnicWearMen.products);
+app.get('/api/products/traditionalWearMen', (req, res) => {
+    res.send(traditionalWearMen.products);
 });
 app.get('/api/products/innerWearMen', (req, res) => {
     res.send(innerWearMen.products);
