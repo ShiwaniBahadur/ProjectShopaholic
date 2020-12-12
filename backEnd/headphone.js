@@ -1,7 +1,7 @@
 export default {
     products: [ // products is an array of products
         {
-            _id:'s-4281109',
+            _id: 's-4281109',
             name: "Women's Embroided Cotton Kurti",
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4281109.jpg',
@@ -10,5 +10,5 @@ export default {
             numReviews: 10,
             countInStock: 6,
         },
-    ]
-}
+    ],
+};

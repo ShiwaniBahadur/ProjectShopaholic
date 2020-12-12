@@ -1,85 +1,98 @@
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
+
 import express from 'express';
 import cors from 'cors';
 
-//Women Category
-import ethnicWear from'./ethnicWear.js';
-import westernWear from'./westernWear';
-import footwear from'./footwear.js';
-import innerWear from'./innerWear.js';
-import bags from'./bags.js';
-import jewellery from'./jewellery.js';
-import accessoriesWomen from'./accessoriesWomen.js';
-import wellness from'./wellness.js';
-import tools from'./tools.js';
-//Men Category
-import footwearMen from'./footwearMen.js';
-import accessoriesMen from'./accessoriesMen.js';
-import traditionalWearMen from'./traditionalWearMen.js';
-import innerWearMen from'./innerWearMen.js';
-import bottomWear from'./bottomWear.js';
-import clothing from'./clothing.js';
-//Skin Care category
-import skinCare from'./skinCare.js';
-//Bath and Shower category
-import bathAndShower from'./bathAndShower.js';
-//Fragnances Category
-import perfume from'./perfume.js';
-//Packed Foods Category
-import packedFoods from'./packedFoods.js';
-//Hair Category
-import hairCare from'./hairCare.js';
-import toolsHair from'./toolsHair.js';
-import herbal from'./herbal.js';
-import hairRemoval from'./hairRemoval.js';
-import straightners from'./straightners.js';
-import stylers from'./stylers.js';
-import trimmers from'./trimmers.js';
-import dryers from'./dryers.js';
-import hairAccessories from'./hairAccessories.js';
-//Makeup Category
-import face from'./face.js';
-import eyes from'./eyes.js';
-import lips from'./lips.js';
-import nails from'./nails.js';
-import makeupKits from'./makeupKits.js';
-import makeupAccessories from'./makeupAccessories.js';
-import makeupCombo from'./makeupCombo.js';
-import creamMen from'./creamMen.js';
-import grooming from'./grooming.js';
+// Women Category
+import ethnicWear from './ethnicWear';
+import westernWear from './westernWear';
+import footwear from './footWear';
+import innerWear from './innerWear';
+import bags from './bags';
+import jewellery from './jewellery';
+import accessoriesWomen from './accessoriesWomen';
+import wellness from './wellness';
+import tools from './tools';
+
+// Men Category
+import footwearMen from './footwearMen';
+import accessoriesMen from './accessoriesMen';
+import traditionalWearMen from './traditionalWearMen';
+import innerWearMen from './innerWearMen';
+import bottomWear from './bottomWear';
+import clothing from './clothing';
+
+// Skin Care category
+import skinCare from './skinCare';
+
+// Bath and Shower category
+import bathAndShower from './bathAndShower';
+
+// Fragnances Category
+import perfume from './perfume';
+
+// Packed Foods Category
+import packedFoods from './packedFoods';
+
+// Hair Category
+import hairCare from './hairCare';
+import toolsHair from './toolsHair';
+import herbal from './herbal';
+import hairRemoval from './hairRemoval';
+import straightners from './straightners';
+import stylers from './stylers';
+import trimmers from './trimmers';
+import dryers from './dryers';
+import hairAccessories from './hairAccessories';
+
+// Makeup Category
+import face from './face';
+import eyes from './eyes';
+import lips from './lips';
+import nails from './nails';
+import makeupKits from './makeupKits';
+import makeupAccessories from './makeupAccessories';
+import makeupCombo from './makeupCombo';
+import creamMen from './creamMen';
+import grooming from './grooming';
+
 // Home Category
-import storage from'./storage.js';
-import appliance from'./appliance.js';
-import curtain from'./curtain.js';
-import livingRoom from'./livingRoom.js';
-import kitchenTools from'./kitchenTools.js';
-import kitchenStorage from'./kitchenStorage.js';
-import kitchenLinens from'./kitchenLinens.js';
-import kitchenAppliances from'./kitchenAppliances.js';
-import cookware from'./cookware.js';
-import garden from'./garden.js';
-import carpets from'./carpets.js';
-import bedding from'./bedding.js';
-import bathroomLinen from'./bathroomLinen.js';
-import bathroomAccessories from'./bathroomAccessories.js';
-//Electronics Category
-import earphone from'./earphone.js';
-import headphone from'./headphone.js';
-import cable from'./cable.js';
-import bluetooth from'./bluetooth.js';
-import cases from'./cases.js';
-import powerBank from'./powerBank.js';
-import chargers from'./chargers.js';
-import holders from'./holders.js';
-import mouse from'./mouse.js';
-import laptopSkin from'./laptopSkin.js';
-import laptopScreen from'./laptopScreen.js';
-import camera from'./camera.js';
-import tripod from'./tripod.js';
-import cctv from'./cctv.js'; 
+import storage from './storage';
+import appliance from './appliance';
+import curtain from './curtain';
+import livingRoom from './livingRoom';
+import kitchenTools from './kitchenTools';
+import kitchenStorage from './kitchenStorage';
+import kitchenLinens from './kitchenLinens';
+import kitchenAppliances from './kitchenAppliances';
+import cookware from './cookware';
+import garden from './garden';
+import carpets from './carpets';
+import bedding from './bedding';
+import bathroomLinen from './bathroomLinen';
+import bathroomAccessories from './bathroomAccessories';
+
+// Electronics Category
+import earphone from './earphone';
+import headphone from './headphone';
+import cable from './cable';
+import bluetooth from './bluetooth';
+import cases from './cases';
+import powerBank from './powerBank';
+import chargers from './chargers';
+import holders from './holders';
+import mouse from './mouse';
+import laptopSkin from './laptopSkin';
+import laptopScreen from './laptopScreen';
+import camera from './camera';
+import tripod from './tripod';
+import cctv from './cctv';
 
 const app = express();
 app.use(cors());
-//Women Category
+
+// Women Category
 app.get('/api/products/ethnicWear', (req, res) => {
     res.send(ethnicWear.products);
 });
@@ -107,7 +120,8 @@ app.get('/api/products/wellness', (req, res) => {
 app.get('/api/products/tools', (req, res) => {
     res.send(tools.products);
 });
-//Men Category
+
+// Men Category
 app.get('/api/products/footwearMen', (req, res) => {
     res.send(footwearMen.products);
 });
@@ -126,23 +140,28 @@ app.get('/api/products/bottomWear', (req, res) => {
 app.get('/api/products/clothing', (req, res) => {
     res.send(clothing.products);
 });
-//Skin Care category
+
+// Skin Care category
 app.get('/api/products/skinCare', (req, res) => {
     res.send(skinCare.products);
 });
-//Bath and Shower category
+
+// Bath and Shower category
 app.get('/api/products/bathAndShower', (req, res) => {
     res.send(bathAndShower.products);
 });
-//Fragnances Category
+
+// Fragnances Category
 app.get('/api/products/perfume', (req, res) => {
     res.send(perfume.products);
 });
-//Packed Foods Category
+
+// Packed Foods Category
 app.get('/api/products/packedFoods', (req, res) => {
     res.send(packedFoods.products);
 });
-//Hair Category
+
+// Hair Category
 app.get('/api/products/hairCare', (req, res) => {
     res.send(hairCare.products);
 });
@@ -170,7 +189,8 @@ app.get('/api/products/dryers', (req, res) => {
 app.get('/api/products/hairAccessories', (req, res) => {
     res.send(hairAccessories.products);
 });
-//Makeup Category
+
+// Makeup Category
 app.get('/api/products/face', (req, res) => {
     res.send(face.products);
 });
@@ -198,6 +218,7 @@ app.get('/api/products/creamMen', (req, res) => {
 app.get('/api/products/grooming', (req, res) => {
     res.send(grooming.products);
 });
+
 // Home Category
 app.get('/api/products/storage', (req, res) => {
     res.send(storage.products);
@@ -241,7 +262,8 @@ app.get('/api/products/bathroomLinen', (req, res) => {
 app.get('/api/products/bathroomAccessories', (req, res) => {
     res.send(bathroomAccessories.products);
 });
-//Electronics Category
+
+// Electronics Category
 app.get('/api/products/earphone', (req, res) => {
     res.send(earphone.products);
 });
@@ -286,5 +308,5 @@ app.get('/api/products/cctv', (req, res) => {
 });
 
 app.listen(7000, () => {
-    console.log("serve at http://localhost:7000");
+    console.log('serve at http://localhost:7000');
 });

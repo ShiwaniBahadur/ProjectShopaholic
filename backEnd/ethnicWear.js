@@ -1,17 +1,17 @@
 export default {
     products: [ // products is an array of products
         {
-            _id:'s-4115072',
+            _id: 's-4115072',
             name: 'Aishani Refined Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4115072.jpg',
-            price: 653, 
+            price: 653,
             rating: 4.5,
             numReviews: 10,
             countInStock: 6,
         },
         {
-            _id:'s-4281109',
+            _id: 's-4281109',
             name: "Women's Embroided Cotton Kurti",
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4281109.jpg',
@@ -21,7 +21,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-439632',
+            _id: 's-439632',
             name: ' Designer Party Wear Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-439632.jpg',
@@ -31,7 +31,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-4871863',
+            _id: 's-4871863',
             name: "Women's Printed Cotton Blend Kurti",
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4871863.jpg',
@@ -41,7 +41,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-4115072',
+            _id: 's-4115072',
             name: "Women's Printed Cotton Blend Kurti",
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4115072.jpg',
@@ -51,7 +51,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-4903084',
+            _id: 's-4903084',
             name: "Hiba Gorgeous Faux Georgette Women's Kurti",
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4903084.jpg',
@@ -61,7 +61,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-4903817',
+            _id: 's-4903817',
             name: 'Trendy Fashionable Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4903817.jpg',
@@ -71,7 +71,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-4932723',
+            _id: 's-4932723',
             name: "Women's Ethnic Motif Printed Rayon Kurti",
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4932723.jpg',
@@ -81,7 +81,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-5055834',
+            _id: 's-5055834',
             name: 'Kashvi Stylish Women Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-5055834.jpg',
@@ -91,7 +91,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-5459272',
+            _id: 's-5459272',
             name: 'Adrika Voguish Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-5459272.jpg',
@@ -101,7 +101,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-5563026',
+            _id: 's-5563026',
             name: 'Attractive Women Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-5563026.jpg',
@@ -111,7 +111,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-5667788',
+            _id: 's-5667788',
             name: 'Jivika Ensemble Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-5667788.jpg',
@@ -121,7 +121,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6004749',
+            _id: 's-6004749',
             name: 'Kashvi Stylish Women Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6004749.jpg',
@@ -131,7 +131,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6316061',
+            _id: 's-6316061',
             name: 'Myra Drishya Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6316061.jpg',
@@ -141,7 +141,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6407359',
+            _id: 's-6407359',
             name: 'Adrika Voguish Kurtis',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6407359.jpg',
@@ -151,7 +151,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6410765',
+            _id: 's-6410765',
             name: 'Aakarsha Fabulous Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6410765.jpg',
@@ -161,7 +161,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6420658',
+            _id: 's-6420658',
             name: 'Alisha Pretty Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6420658.jpg',
@@ -171,7 +171,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6631431',
+            _id: 's-6631431',
             name: 'Mialo Anarkali Printed Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6631431.jpg',
@@ -181,7 +181,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6632272',
+            _id: 's-6632272',
             name: 'Attractive Rayon Kurta',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6632272.jpg',
@@ -191,7 +191,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-6859583',
+            _id: 's-6859583',
             name: 'Aakarsha Fabulous Red Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-6859583.jpg',
@@ -201,7 +201,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-7087514',
+            _id: 's-7087514',
             name: 'Aakarsha Fabulous Black Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-7087514.jpg',
@@ -211,7 +211,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-7107395',
+            _id: 's-7107395',
             name: 'Myra Petite Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-7107395.jpg',
@@ -221,7 +221,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-7366916',
+            _id: 's-7366916',
             name: 'Adrika Voguish Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-7366916.jpg',
@@ -231,7 +231,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-7457361',
+            _id: 's-7457361',
             name: 'Charvi Refined Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-7457361.jpg',
@@ -241,7 +241,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-7601931',
+            _id: 's-7601931',
             name: 'Myra Drishya Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-7601931.jpg',
@@ -251,7 +251,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-8086541',
+            _id: 's-8086541',
             name: 'Adrika Voguish Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-8086541.jpg',
@@ -261,7 +261,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-8086546',
+            _id: 's-8086546',
             name: 'Charvi Sensational Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-8086546.jpg',
@@ -271,7 +271,7 @@ export default {
             countInStock: 6,
         },
         {
-            _id:'s-8777873',
+            _id: 's-8777873',
             name: 'Ahisarika women kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-8777873.jpg',
@@ -280,6 +280,5 @@ export default {
             numReviews: 10,
             countInStock: 6,
         },
-    ]
-}
-    
+    ],
+};
