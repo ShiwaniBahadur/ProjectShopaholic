@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Rating from '../components/Rating';
 
 const HomeScreen = {
     // eslint-disable-next-line consistent-return
@@ -27,6 +28,12 @@ const HomeScreen = {
                     <a href="/#/product/${product._id}">
                         ${product.name}		
                     </a>  
+                </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })} 
                 </div>
                 <div class="product-price">
                     ₹${product.price}
@@ -60,6 +67,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -92,6 +104,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -124,6 +141,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -188,6 +210,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -220,6 +247,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -252,6 +284,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -284,6 +321,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -317,6 +359,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -349,6 +396,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -381,6 +433,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -413,6 +470,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -445,6 +507,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -477,6 +544,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -510,6 +582,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -543,6 +620,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -576,6 +658,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -609,6 +696,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -642,6 +734,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -674,6 +771,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -706,6 +808,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -738,6 +845,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -770,6 +882,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -802,6 +919,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -834,6 +956,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -866,6 +993,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -898,6 +1030,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -931,6 +1068,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -963,6 +1105,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -995,6 +1142,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1027,6 +1179,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1059,6 +1216,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1091,6 +1253,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1123,6 +1290,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1155,6 +1327,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1187,6 +1364,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1220,6 +1402,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1252,6 +1439,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1284,6 +1476,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1316,6 +1513,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1348,6 +1550,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1380,6 +1587,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1412,6 +1624,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1444,6 +1661,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1476,6 +1698,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1508,6 +1735,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1540,6 +1772,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1572,6 +1809,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1604,6 +1846,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1636,6 +1883,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1669,6 +1921,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1701,6 +1958,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1733,6 +1995,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1765,6 +2032,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1797,6 +2069,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1829,6 +2106,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1861,6 +2143,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1893,6 +2180,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1925,6 +2217,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1957,6 +2254,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -1989,6 +2291,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -2021,6 +2328,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -2053,6 +2365,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
@@ -2085,6 +2402,11 @@ const HomeScreen = {
                         ${product.name}		
                     </a>  
                 </div>
+                <div class = "product-rating"> 
+                ${Rating.render({
+                    value: product.rating,
+                    text: `${product.numReviews} reviews`,
+                  })}
                 <div class="product-price">
                     ₹${product.price}
                 </div>
