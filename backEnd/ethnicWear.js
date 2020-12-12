@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     products: [ // products is an array of products
         {
             _id:'s-4115072',
