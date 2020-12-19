@@ -1,12 +1,9 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
-
 import express from 'express';
 import cors from 'cors';
 
 // Women Category
 import ethnicWear from './ethnicWear';
-import westernWear from './westernWear';
+/* import westernWear from './westernWear';
 import footwear from './footWear';
 import innerWear from './innerWear';
 import bags from './bags';
@@ -87,7 +84,7 @@ import laptopSkin from './laptopSkin';
 import laptopScreen from './laptopScreen';
 import camera from './camera';
 import tripod from './tripod';
-import cctv from './cctv';
+import cctv from './cctv'; */
 
 const app = express();
 app.use(cors());
@@ -96,7 +93,7 @@ app.use(cors());
 app.get('/api/products/ethnicWear', (req, res) => {
     res.send(ethnicWear.products);
 });
-app.get('/api/products/westernWear', (req, res) => {
+/* app.get('/api/products/westernWear', (req, res) => {
     res.send(westernWear.products);
 });
 app.get('/api/products/footwear', (req, res) => {
@@ -305,8 +302,18 @@ app.get('/api/products/tripod', (req, res) => {
 });
 app.get('/api/products/cctv', (req, res) => {
     res.send(cctv.products);
+}); */
+
+app.get('/api/products/ethnicWear/:id', (req,res) =>{
+    const product = ethnicWear.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
 });
 
 app.listen(7000, () => {
     console.log('serve at http://localhost:7000');
 });
+
