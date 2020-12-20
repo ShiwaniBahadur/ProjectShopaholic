@@ -3,7 +3,7 @@ import cors from 'cors';
 
 // Women Category
 import ethnicWear from './ethnicWear';
-/* import westernWear from './westernWear';
+import westernWear from './westernWear';
 import footwear from './footWear';
 import innerWear from './innerWear';
 import bags from './bags';
@@ -84,7 +84,7 @@ import laptopSkin from './laptopSkin';
 import laptopScreen from './laptopScreen';
 import camera from './camera';
 import tripod from './tripod';
-import cctv from './cctv'; */
+import cctv from './cctv'; 
 
 const app = express();
 app.use(cors());
@@ -93,7 +93,7 @@ app.use(cors());
 app.get('/api/products/ethnicWear', (req, res) => {
     res.send(ethnicWear.products);
 });
-/* app.get('/api/products/westernWear', (req, res) => {
+app.get('/api/products/westernWear', (req, res) => {
     res.send(westernWear.products);
 });
 app.get('/api/products/footwear', (req, res) => {
@@ -302,10 +302,541 @@ app.get('/api/products/tripod', (req, res) => {
 });
 app.get('/api/products/cctv', (req, res) => {
     res.send(cctv.products);
-}); */
+}); 
 
 app.get('/api/products/ethnicWear/:id', (req,res) =>{
     const product = ethnicWear.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+
+// Women Category
+app.get('/api/products/westernWear/:id', (req,res) =>{
+    const product = westernWear.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/footwear/:id', (req,res) =>{
+    const product = footwear.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/innerWear/:id', (req,res) =>{
+    const product = innerWear.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/bags/:id', (req,res) =>{
+    const product = bags.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/jewellery/:id', (req,res) =>{
+    const product = jewellery.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/accessoriesWomen/:id', (req,res) =>{
+    const product = accessoriesWomen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/wellness/:id', (req,res) =>{
+    const product = wellness.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/tools/:id', (req,res) =>{
+    const product = tools.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+
+// Men Category
+app.get('/api/products/footwearMen/:id', (req,res) =>{
+    const product = footwearMen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/accessoriesMen/:id', (req,res) =>{
+    const product = accessoriesMen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/traditionalWearMen/:id', (req,res) =>{
+    const product = traditionalWearMen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/innerWearMen/:id', (req,res) =>{
+    const product = innerWearMen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/bottomWear/:id', (req,res) =>{
+    const product = bottomWear.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+app.get('/api/products/clothing/:id', (req,res) =>{
+    const product = clothing.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+
+// Skin Care category
+app.get('/api/products/skinCare/:id', (req,res) =>{
+    const product = skinCare.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+// Bath and Shower category
+app.get('/api/products/bathAndShower/:id', (req,res) =>{
+    const product = bathAndShower.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+
+// Fragnances Category
+app.get('/api/products/perfume/:id', (req,res) =>{
+    const product = perfume.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+
+// Packed Foods Category
+app.get('/api/products/packedFoods/:id', (req,res) =>{
+    const product = packedFoods.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+}); 
+
+// Hair Category
+app.get('/api/products/hairCare/:id', (req,res) =>{
+    const product = hairCare.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/toolsHair/:id', (req,res) =>{
+    const product = toolsHair.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/herbal/:id', (req,res) =>{
+    const product = herbal.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/hairRemoval/:id', (req,res) =>{
+    const product = hairRemoval.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/straightners/:id', (req,res) =>{
+    const product = straightners.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/stylers/:id', (req,res) =>{
+    const product = stylers.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/trimmers/:id', (req,res) =>{
+    const product = trimmers.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/dryers/:id', (req,res) =>{
+    const product = dryers.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/hairAccessories/:id', (req,res) =>{
+    const product = hairAccessories.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+
+// Makeup Category
+app.get('/api/products/face/:id', (req,res) =>{
+    const product = face.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/eyes/:id', (req,res) =>{
+    const product = eyes.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/lips/:id', (req,res) =>{
+    const product = lips.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/nails/:id', (req,res) =>{
+    const product = nails.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/makeupKits/:id', (req,res) =>{
+    const product = makeupKits.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/makeupAccessories/:id', (req,res) =>{
+    const product = makeupAccessories.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/makeupCombo/:id', (req,res) =>{
+    const product = makeupCombo.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/creamMen/:id', (req,res) =>{
+    const product = creamMen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/grooming/:id', (req,res) =>{
+    const product = grooming.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+
+// Home Category
+app.get('/api/products/storage/:id', (req,res) =>{
+    const product = storage.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/appliance/:id', (req,res) =>{
+    const product = appliance.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/curtain/:id', (req,res) =>{
+    const product = curtain.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/livingRoom/:id', (req,res) =>{
+    const product = livingRoom.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/kitchenTools/:id', (req,res) =>{
+    const product = kitchenTools.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/kitchenStorage/:id', (req,res) =>{
+    const product = kitchenStorage.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/kitchenLinens/:id', (req,res) =>{
+    const product = kitchenLinens.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/kitchenAppliances/:id', (req,res) =>{
+    const product = grooming.kitchenAppliances.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/cookware/:id', (req,res) =>{
+    const product = cookware.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/garden/:id', (req,res) =>{
+    const product = garden.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/carpets/:id', (req,res) =>{
+    const product = carpets.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/bedding/:id', (req,res) =>{
+    const product = bedding.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/bathroomLinen/:id', (req,res) =>{
+    const product = bathroomLinen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/bathroomAccessories/:id', (req,res) =>{
+    const product = bathroomAccessories.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+
+// Electronics Category
+app.get('/api/products/earphone/:id', (req,res) =>{
+    const product = earphone.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/headphone/:id', (req,res) =>{
+    const product = headphone.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/cable/:id', (req,res) =>{
+    const product = cable.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/bluetooth/:id', (req,res) =>{
+    const product = bluetooth.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/cases/:id', (req,res) =>{
+    const product = cases.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/powerBank/:id', (req,res) =>{
+    const product = powerBank.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/chargers/:id', (req,res) =>{
+    const product = chargers.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/holders/:id', (req,res) =>{
+    const product = holders.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/mouse/:id', (req,res) =>{
+    const product = mouse.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/laptopSkin/:id', (req,res) =>{
+    const product = laptopSkin.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/laptopScreen/:id', (req,res) =>{
+    const product = laptopScreen.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/camera/:id', (req,res) =>{
+    const product = camera.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/tripod/:id', (req,res) =>{
+    const product = tripod.products.find(x => x._id === req.params.id);
+    if(product){
+        res.send(product);
+    } else{
+        res.status(404).send({message: 'Product Not Found!'});
+    } 
+});
+app.get('/api/products/cctv/:id', (req,res) =>{
+    const product = cctv.products.find(x => x._id === req.params.id);
     if(product){
         res.send(product);
     } else{
