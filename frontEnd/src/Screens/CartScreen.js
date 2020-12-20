@@ -1,13 +1,14 @@
+/* eslint-disable no-use-before-define */
 import { getProduct } from '../api';
 import { getCartItems, setCartItems } from '../localStorage';
-import { parseRequestUrl} from '../utils';
+import { parseRequestUrl, rerender} from '../utils';
 
 const addToCart = (item, forceUpdate = false) => {
     let cartItems = getCartItems();
     const existItem = cartItems.find((x) => x.product === item.product);
     if (existItem) {
       if (forceUpdate) {
-        cartItems = cartItems.map((x) =>
+          cartItems = cartItems.map((x) =>
           x.product === existItem.product ? item : x
         );
       }
@@ -15,10 +16,39 @@ const addToCart = (item, forceUpdate = false) => {
       cartItems = [...cartItems, item];
     }
     setCartItems(cartItems);
+    if (forceUpdate) {
+        rerender(CartScreen);
+      }
+  };
+
+  const removeFromCart = (id) => {
+    setCartItems(getCartItems().filter((x) => x.product !== id));
+    if (id === parseRequestUrl().id) {
+      document.location.hash = '/cart';
+    } else {
+      rerender(CartScreen);
+    }
   };
 
 const CartScreen = {
-    after_render: () => {},
+    after_render: () => {
+        const qtySelects = document.getElementsByClassName('qty-select');
+        Array.from(qtySelects).forEach((qtySelect) => {
+            qtySelect.addEventListener('change', (e) => {
+                const item = getCartItems().find((x) => x.product === qtySelect.id);
+                addToCart({ ...item, qty: Number(e.target.value) }, true);
+      });
+    });
+    const deleteButtons = document.getElementsByClassName('delete-button');
+    Array.from(deleteButtons).forEach((deleteButton) => {
+      deleteButton.addEventListener('click', () => {
+        removeFromCart(deleteButton.id);
+      });
+    });
+    document.getElementById('checkout-button').addEventListener('click', () => {
+      document.location.hash = '/signin';
+    }); 
+    },
     render: async () => {
         const request = parseRequestUrl();
         if (request.id) {
@@ -52,7 +82,7 @@ const CartScreen = {
                 </div>
                 <div class="cart-name">
                   <div>
-                    <a href="/#/product/${item.product}">
+                    <a href="#/product/${item.product}">
                       ${item.name}
                     </a>
                   </div>

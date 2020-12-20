@@ -3,12 +3,14 @@ import ProductScreen from './Screens/ProductScreen';
 import Error404Screen from './Screens/Error404Screen';
 import { parseRequestUrl } from './utils';
 import CartScreen from './Screens/CartScreen';
+import SigninScreen from './Screens/SigninScreen';
 
 const routes = {
     '/': HomeScreen,
     '/product/:id': ProductScreen,
     '/cart/:id': CartScreen,
     '/cart': CartScreen,
+    '/signin': SigninScreen,
 };
 const router = async () => { // used to define the url path when a product is opened
     const request = parseRequestUrl();
