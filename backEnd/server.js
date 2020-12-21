@@ -90,6 +90,8 @@ import cctv from './cctv';
 
 import config from './config';
 import userRouter from './routers/userRouter';
+import orderRouter from './routers/orderRouter';
+
 
 mongoose
   .connect(config.MONGODB_URL, {
@@ -110,6 +112,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
 
 // Women Category
 app.get('/api/products/ethnicWear', (req, res) => {
@@ -866,6 +869,7 @@ app.get('/api/products/cctv/:id', (req,res) =>{
     } 
 });
 
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) =>{
     const status = err.name && err.name === 'ValidationError' ? 400 : 500;
     res.status(status).send({ message: err.message });

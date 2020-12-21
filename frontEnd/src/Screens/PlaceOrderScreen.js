@@ -2,11 +2,11 @@ import {
     getCartItems,
     getShipping,
     getPayment,
-    // cleanCart,
+    cleanCart,
   } from '../localStorage';
   import CheckoutSteps from '../components/CheckoutSteps';
-  // import { showLoading, hideLoading, showMessage } from '../utils';
-  // import { createOrder } from '../api';
+  import { showLoading, hideLoading, showMessage } from '../utils';
+  import { createOrder } from '../api';
   
   const convertCartToOrder = () => {
     const orderItems = getCartItems();
@@ -36,7 +36,7 @@ import {
     };
   };
   const PlaceOrderScreen = {
-    after_render: async () => { /*
+    after_render: async () => { 
       document
         .getElementById('placeorder-button')
         .addEventListener('click', async () => {
@@ -50,7 +50,7 @@ import {
             cleanCart();
             document.location.hash = `/order/${data.order._id}`;
           }
-        }); */
+        }); 
     },
     render: () => {
       const {

@@ -1,7 +1,7 @@
 export default {
     products: [ // products is an array of products
         {
-            _id: 's-4115072',
+            _id: '411507241150724115072411',
             name: 'Aishani Refined Kurti',
             category: 'Kurti',
             image: '/images/women/kurtiAndKurta/s-4115072.jpg',
