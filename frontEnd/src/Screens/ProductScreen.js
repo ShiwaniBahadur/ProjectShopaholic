@@ -1,10 +1,11 @@
 import { getProduct } from '../api';
-import { parseRequestUrl } from '../utils';
+import { hideLoading, parseRequestUrl, showLoading } from '../utils';
 import Rating from '../components/Rating';
 
 const ProductScreen = {
   after_render: () => {
     const request = parseRequestUrl();
+    showLoading();
     document.getElementById('add-button').addEventListener('click', () => {
     document.location.hash = `/cart/${request.id}`;
     });
@@ -15,6 +16,7 @@ const ProductScreen = {
         if (product.error) {
             return `<div>${product.error}</div>`;
           } 
+          hideLoading();
         return `<div class="content">
         <div class="back-to-result">
           <a href="/#/">Back to result </a>

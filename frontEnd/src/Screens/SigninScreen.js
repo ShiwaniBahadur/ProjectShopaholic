@@ -1,10 +1,11 @@
-/* import { signin } from '../api';
+
+import { signin } from '../api';
 import { getUserInfo, setUserInfo } from '../localStorage';
-import { showLoading, hideLoading, showMessage, redirectUser } from '../utils'; */
+import { showLoading, hideLoading, /* showMessage, redirectUser */ } from '../utils';
 
 const SigninScreen = {
   after_render: () => {
-    /* document
+    document
       .getElementById('signin-form')
       .addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -15,18 +16,21 @@ const SigninScreen = {
         });
         hideLoading();
         if (data.error) {
-          showMessage(data.error);
+          alert(data.error);
+          // showMessage(data.error);
         } else {
+          document.location.hash ='/';
           setUserInfo(data);
-          redirectUser();
+          // redirectUser();
         }
-      }); */
+      }); 
   },
-  render: () => 
-    /* if (getUserInfo().name) {
-      redirectUser();
-    } */
-    `
+  render: () => {
+    if (getUserInfo().name) {
+      document.location.hash ='/';
+      // redirectUser();
+    }
+    return `
     <div class="form-container">
       <form id="signin-form">
         <ul class="form-items">
@@ -47,13 +51,13 @@ const SigninScreen = {
           <li>
             <div>
               New User?
-              <a href="#/register">Create your account </a>
+              <a href="/#/register">Create your account </a>
             </div>
           </li>
         </ul>
       </form>
     </div>
-    `
-,
+    `;
+  },
 };
 export default SigninScreen;
