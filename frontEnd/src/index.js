@@ -5,6 +5,11 @@ import { hideLoading, parseRequestUrl, showLoading } from './utils';
 import CartScreen from './Screens/CartScreen';
 import SigninScreen from './Screens/SigninScreen';
 import Header from './components/Header';
+import RegisterScreen from './Screens/RegisterScreen';
+import ProfileScreen from './Screens/ProfileScreen';
+import ShippingScreen from './Screens/ShippingScreen';
+import PaymentScreen from './Screens/PaymentScreen';
+import PlaceOrderScreen from './Screens/PlaceOrderScreen';
 
 const routes = {
     '/': HomeScreen,
@@ -12,6 +17,11 @@ const routes = {
     '/cart/:id': CartScreen,
     '/cart': CartScreen,
     '/signin': SigninScreen,
+    '/register': RegisterScreen,
+    '/profile': ProfileScreen,
+    '/shipping': ShippingScreen,
+    '/payment': PaymentScreen,
+    '/placeorder': PlaceOrderScreen,
 };
 const router = async () => { // used to define the url path when a product is opened
     showLoading();
@@ -26,7 +36,7 @@ const router = async () => { // used to define the url path when a product is op
     await Header.after_render(); 
     const main = document.getElementById('main-container');
     main.innerHTML = await screen.render();
-    await screen.after_render();
+    if(screen.after_render) await screen.after_render();
     hideLoading();
 };
 window.addEventListener('load', router);
