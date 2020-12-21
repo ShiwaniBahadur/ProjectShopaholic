@@ -61,7 +61,7 @@ orderRouter.get(
     const orders = await Order.find({}).populate('user');
     res.send(orders);
   })
-);
+); */
 
 orderRouter.get(
   '/mine',
@@ -70,7 +70,7 @@ orderRouter.get(
     const orders = await Order.find({ user: req.user._id });
     res.send(orders);
   })
-);
+);  
 orderRouter.get(
   '/:id',
   isAuth,
@@ -82,7 +82,7 @@ orderRouter.get(
       res.status(404).send({ message: 'Order Not Found' });
     }
   })
-); */
+);
 orderRouter.post(
   '/',
   isAuth,

@@ -10,6 +10,7 @@ import ProfileScreen from './Screens/ProfileScreen';
 import ShippingScreen from './Screens/ShippingScreen';
 import PaymentScreen from './Screens/PaymentScreen';
 import PlaceOrderScreen from './Screens/PlaceOrderScreen';
+import OrderScreen from './Screens/OrderScreen';
 
 const routes = {
     '/': HomeScreen,
@@ -22,6 +23,7 @@ const routes = {
     '/shipping': ShippingScreen,
     '/payment': PaymentScreen,
     '/placeorder': PlaceOrderScreen,
+    '/order/:id': OrderScreen,
 };
 const router = async () => { // used to define the url path when a product is opened
     showLoading();
