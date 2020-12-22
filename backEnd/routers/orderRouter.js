@@ -1,12 +1,12 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import { isAuth, /* isAdmin */} from '../utils';
+import { isAdmin, isAuth} from '../utils';
 import Order from '../models/orderModel';
-/* import User from '../models/userModel';
-import Product from '../models/productModel'; */
+import User from '../models/userModel';
+import Product from '../models/productModel'; 
 
 const orderRouter = express.Router();
-/* orderRouter.get(
+orderRouter.get(
   '/summary',
   isAuth,
   isAdmin,
@@ -52,7 +52,7 @@ const orderRouter = express.Router();
       productCategories,
     });
   })
-);
+); 
 orderRouter.get(
   '/',
   isAuth,
@@ -61,7 +61,7 @@ orderRouter.get(
     const orders = await Order.find({}).populate('user');
     res.send(orders);
   })
-); */
+);
 
 orderRouter.get(
   '/mine',
@@ -101,7 +101,7 @@ orderRouter.post(
     res.status(201).send({ message: 'New Order Created', order: createdOrder });
   })
 );
-/* orderRouter.delete(
+orderRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
@@ -115,28 +115,6 @@ orderRouter.post(
     }
   })
 );
-
-orderRouter.put(
-  '/:id/pay',
-  isAuth,
-  expressAsyncHandler(async (req, res) => {
-    const order = await Order.findById(req.params.id);
-    if (order) {
-      order.isPaid = true;
-      order.paidAt = Date.now();
-      order.payment.paymentResult = {
-        payerID: req.body.payerID,
-        paymentID: req.body.paymentID,
-        orderID: req.body.orderID,
-      };
-      const updatedOrder = await order.save();
-      res.send({ message: 'Order Paid', order: updatedOrder });
-    } else {
-      res.status(404).send({ message: 'Order Not Found.' });
-    }
-  })
-);
-
 orderRouter.put(
   '/:id/deliver',
   isAuth,
@@ -152,5 +130,5 @@ orderRouter.put(
     }
   })
 );
-*/
+
 export default orderRouter;

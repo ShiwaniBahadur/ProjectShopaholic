@@ -11,6 +11,10 @@ import ShippingScreen from './Screens/ShippingScreen';
 import PaymentScreen from './Screens/PaymentScreen';
 import PlaceOrderScreen from './Screens/PlaceOrderScreen';
 import OrderScreen from './Screens/OrderScreen';
+import DashboardScreen from './Screens/DashboardScreen';
+import ProductListScreen from './Screens/ProductListScreen';
+import ProductEditScreen from './Screens/ProductEditScreen';
+import OrderListScreen from './Screens/OrderListScreen';
 
 const routes = {
     '/': HomeScreen,
@@ -24,6 +28,10 @@ const routes = {
     '/payment': PaymentScreen,
     '/placeorder': PlaceOrderScreen,
     '/order/:id': OrderScreen,
+    '/dashboard': DashboardScreen,
+    '/productlist' : ProductListScreen,
+    '/product/:id/edit': ProductEditScreen,
+    '/orderlist': OrderListScreen,
 };
 const router = async () => { // used to define the url path when a product is opened
     showLoading();

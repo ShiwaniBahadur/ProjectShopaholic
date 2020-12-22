@@ -1,12 +1,17 @@
-import axios from 'axios';
+// import axios from 'axios';
+import { getProducts } from '../api';
 import Rating from '../components/Rating';
-import { hideLoading, showLoading } from '../utils';
+// import { hideLoading, showLoading } from '../utils';
 
 const HomeScreen = {
     // eslint-disable-next-line consistent-return
     render: async () => {
         // Women category
-        showLoading();
+        const products = await getProducts();
+    if (products.error) {
+      return `<div class="error">${products.error}</div>`;
+    }
+        /* showLoading();
         if (window.location.href.indexOf('ethnicWear') > -1) {
             const response = await axios({
                 url: 'http://localhost:7000/api/products/ethnicWear',
@@ -18,7 +23,7 @@ const HomeScreen = {
             if (!response || response.statusText !== 'OK') {
                 return '<div> Error in getting data</div>';
             }
-            const products = response.data;
+            const products = response.data; */
             return `               
             <ul class="products">
             ${products.map((product) => `
@@ -45,8 +50,8 @@ const HomeScreen = {
             </li>
             `).join('\n')} 
             `;
-        }
-        if (window.location.href.indexOf('westernWear') > -1) {
+        
+        /* if (window.location.href.indexOf('westernWear') > -1) {
             const response = await axios({
                 url: 'http://localhost:7000/api/products/westernWear',
                 headers: {
@@ -2481,7 +2486,7 @@ const HomeScreen = {
             </li>
             `).join('\n')} 
             `;
-        }
+        } */
     },
 };
 export default HomeScreen;

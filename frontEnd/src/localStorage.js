@@ -60,11 +60,11 @@ export const getCartItems = () => {
       const payment = localStorage.getItem('payment')
         ? JSON.parse(localStorage.getItem('payment'))
         : {
-            paymentMethod: 'paypal',
+            paymentMethod: 'CashOnDelivery',
           };
       return payment;
     };
-    export const setPayment = ({ paymentMethod = 'paypal' }) => {
+    export const setPayment = ({ paymentMethod = 'CashOnDelivery' }) => {
       localStorage.setItem('payment', JSON.stringify({ paymentMethod }));
     };
     export const cleanCart = () => {

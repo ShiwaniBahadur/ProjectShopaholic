@@ -2,7 +2,7 @@ import { getUserInfo } from '../localStorage';
 
 const Header = {
   render: () => {
-    const { name } = getUserInfo();
+    const { name, isAdmin } = getUserInfo();
     return ` <div class="shopName">
     <a href="/#/"> SHOPAHOLIC</a>
 </div>
@@ -14,6 +14,7 @@ ${
   }    
     
     <a href="#/cart"><img src="images1/logo/shopping-cart.png" alt="shoppingCart" class="cartIcon"></a>
+    ${isAdmin ? `<a href="#/dashboard">Dashboard</a>` : ''}
 </div>`;
   },
   after_render: () => {},
